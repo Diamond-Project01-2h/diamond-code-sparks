@@ -1,0 +1,43 @@
+{
+    "routes": {
+      "TeacherLogin": "/teacherlogin",
+      "Sandbox": "/sandbox",
+      "About": "/about",
+      "Help": "/help",
+      "Home": "/",
+      "Dashboard": "/dashboard",
+      "SignOut": "/",
+      "AccountInfo": "/account",
+      "ContentCreatorDashboard": "/ccdashboard",
+      "ResearcherDashboard": "/report",
+      "BugReport": "/bugreport"
+    },
+
+    "icons": {
+        "TeacherLogin": "fa-user",
+        "Sandbox": "fa-user",
+        "About": "fa-user",
+        "Help": "fa-user",
+        "Home": "fa-user",
+        "Dashboard": "fa-user",
+        "SignOut": "fa-user",
+        "AccountInfo": "fa-user",
+        "ContentCreatorDashboard": "fa-user",
+        "ResearcherDashboard": "fa-user",
+        "BugReport": "fa-user"
+      },
+    "users": {
+      "DefaultUser": ["Home", "TeacherLogin", "Sandbox", "About", "Help"],
+      "Mentor": ["Dashboard", "AccountInfo", "SignOut", "Sandbox", "BugReport"],
+      "Student": ["SignOut"],
+      "ContentCreator": [
+        "ContentCreatorDashboard",
+        "AccountInfo",
+        "Sandbox",
+        "SignOut",
+        "BugReport"
+      ],
+      "Researcher": ["ResearcherDashboard", "BugReport", "SignOut"]
+    }
+  }
+  
