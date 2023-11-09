@@ -1,0 +1,53 @@
+@import "../../assets/style.less";
+
+.container {
+  background-color: #colors[primary];
+  height: 100%;
+  min-height: 100vh;
+  width: 100%;
+  min-width: 100vw;
+  text-align: center;
+}
+
+#faq-content-container {
+  margin: 8vh auto 5vh auto;
+  padding: 5vh 5vw;
+  width: 80vw;
+  text-align: left;
+  background: #colors[tertiary];
+  border-radius: 20px;
+  border: 2px solid #colors[secondary];
+
+  #title {
+    font-size: 3em;
+    color: #colors[text-primary];
+    margin-bottom: 0;
+  }
+
+  #divider {
+    width: 95%;
+    height: 0;
+    margin: 5vh 0;
+    border-bottom: 1px solid #colors[secondary];
+    opacity: 20%;
+  }
+
+  p, h2 {
+    font-size: 1.5em;
+    color: #colors[text-primary];
+  }
+
+  .question {
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: #colors[secondary];
+    }
+  }
+
+  .answer {
+    display: block;
+  }
+}
