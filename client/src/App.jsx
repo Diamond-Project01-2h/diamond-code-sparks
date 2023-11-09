@@ -2,10 +2,13 @@ import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import PrivateRoute from './Utils/PrivateRoute';
 import About from './views/About/About';
+import Help from './views/Help/Help';
 import BlocklyPage from './views/BlocklyPage/BlocklyPage';
 import BugReport from './views/BugReport/BugReport';
 import ContentCreator from './views/ContentCreator/ContentCreator';
 import Home from './views/Home/Home';
+import Join from './views/Join/Join';
+import FAQ from './views/FAQ/FAQ';
 import Classroom from './views/Mentor/Classroom/Classroom';
 import Dashboard from './views/Mentor/Dashboard/Dashboard';
 import NotFound from './views/NotFound';
@@ -25,7 +28,10 @@ const App = () => {
     <div>
       <Routes>
         <Route path='/' element={<Home />} />
+        <Route path='/join' element={<Join />} />
+        <Route path='/faq' element={<FAQ />} />
         <Route path='/about' element={<About />} />
+		<Route path='/help' element={<Help />} />
         <Route path='/teacherlogin' element={<TeacherLogin />} />
         <Route path='/forgot-password' element={<ForgetPassword />} />
         <Route path='/reset-password' element={<ResetPassword />} />
