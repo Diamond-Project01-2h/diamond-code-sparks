@@ -2,10 +2,19 @@ import React from "react"
 import NSF from "../../assets/nsf_logo.png"
 import TAMU from "../../assets/tamu_logo.png"
 import UF from "../../assets/uf_logo.png"
+import BlocklyLogo from "../../assets/blocklylogo.png"
 import NavBar from "../../components/NavBar/NavBar"
 import "./About.less"
+import { useState } from "react";
 
 export default function About(props) {
+  
+  const [expanded, setExpanded] = useState(false);
+
+  const [expandedE, setExpandedE] = useState(false);
+
+  const [expandedS, setExpandedS] = useState(false);
+
   return (
     <div className="container nav-padding">
       <NavBar />
@@ -26,6 +35,7 @@ export default function About(props) {
           students to support them in building computational physical models for
           science experiments in the classroom.
         </p>
+        
         <div id="divider" />
         <h1 id="secondary-title">How it Works</h1>
         <p>
@@ -43,7 +53,52 @@ export default function About(props) {
           uploaded to the student's Arduino, provide support in performing a
           corresponding science project in the classroom.
         </p>
+
         <div id="divider" />
+
+        <div className="students">
+          <span className="showMore" onClick={() => setExpandedS(!expandedS)}>
+          <h1 id="info-title">For Students ▼</h1>
+          </span>
+          {expandedS ? (
+            <div className="expandable">
+              <p>CASMM provides a fun learning environment to help you learn how to program an Arduino. 
+                You can create on your own through the sandbox and explore the creations in the gallery 
+                or join a classroom with a code provided by your teacher for guided assignments.</p>
+            </div>
+          ) : null}
+        </div>
+
+        <div className="parents">
+          <span className="showMore" onClick={() => setExpanded(!expanded)}>
+          <h1 id="info-title">For Parents ▼</h1>
+          </span>
+          {expanded ? (
+            <div className="expandable">
+              <p>CASMM provides a safe and friendly learning environment for students of all ages that
+                 allows them to learn to think more creatively through an easy-to-use block-based
+                  programming language. To ensure CASMM remains a safe space, CASMM moderates any
+                   shared content and provides educators with the tools to moderate within their classrooms.</p>
+            </div>
+          ) : null}
+        </div>
+
+        <div className="Educators">
+          <span className="showMore" onClick={() => setExpandedE(!expandedE)}>
+          <h1 id="info-title">For Educators ▼</h1>
+          </span>
+          {expandedE ? (
+            <div className="expandable">
+              <p>CASMM allows teachers to make classrooms provide assignments for students. 
+                Teachers can also create or use shared lessons to help students learn how to program an Arduino. 
+                CASMM allows students to share their creations within their classrooms or schools and
+                 provides discussion boards and live dashboards to allow students to learn collaboratively.</p>
+            </div>
+          ) : null}
+        </div>
+
+        <div id="divider" />
+
         <h1 id="secondary-title">Our Team</h1>
         <p>
           The following team members from the University of Florida have
@@ -83,6 +138,12 @@ export default function About(props) {
           <br />
           David Magda
         </p>
+
+        <div id="divider" />
+        
+        <h1 id="title">Built on</h1>
+        <img src={BlocklyLogo} alt="tamu" />
+
       </div>
     </div>
   )
