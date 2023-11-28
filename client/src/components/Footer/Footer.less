@@ -1,20 +1,75 @@
 .footer {
     display: flex;
-    justify-content: flex-start;
+    flex-direction: column;
     align-items: center;
-    padding: 20px;
-    background-color: #fff; // This should be your brand color
-  }
-  
-  .footer-links a {
-    margin-right: 15px;
-    color: #007bff; // This should be your brand highlight color
-    text-decoration: none;
-    cursor: pointer;
-    transition: color 0.3s ease;
-  }
-  
-  .footer-links a:hover {
-    color: #0056b3; // Darker shade for hover effect
-  }
-  
+    padding: 40px;
+    background-color: #3D5C82;
+    color: #ffffff;
+
+    .footer-content {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom: 20px;
+
+        .footer-section {
+            display: flex;
+            flex-direction: column;
+
+            h4 {
+                margin-bottom: 10px;
+            }
+
+            a {
+                color: #ffffff;
+                text-decoration: none;
+                margin-bottom: 5px;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+
+            .social-media-icons {
+                display: flex;
+                align-items: center;
+                margin-bottom: 20px;
+
+                svg {
+                    margin-right: 10px;
+                    width: 24px;
+                    height: auto;
+                }
+            }
+
+            img {
+                margin-right: 10px;
+                width: 100px;
+                height: auto;
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    .footer-bottom {
+        font-size: 0.8rem;
+        text-align: center;
+        border-top: 1px solid #ffffff;
+        padding-top: 20px;
+        width: 100%;
+
+        a {
+            color: #ffffff;
+            margin: 0 10px;
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        span {
+            margin-right: 10px;
+        }
+    }
+}
