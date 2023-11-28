@@ -42,7 +42,7 @@ const Footer = ({textScale, textScaleUpdate}) => {
         <div className="footer-section">
           <h4>FOR PARENTS</h4>
           <a href="#">How it works</a>
-          <a href="#">FAQ</a>
+          <a onClick={() => navigate('/faq')} href="#">FAQ</a>
           <a href="#">Start a Free Trial</a>
           <a href="#">Login</a>
         </div>
@@ -54,7 +54,7 @@ const Footer = ({textScale, textScaleUpdate}) => {
         </div>
         <div className="footer-section">
           <h4>CODESPARKS</h4>
-          <a href="#">About Us</a>
+          <a onClick={() => navigate('/about')} href="#">About Us</a>
           <a href="#">Awards</a>
           <a href="#">Press</a>
           <a href="#">Contact Us</a>
