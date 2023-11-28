@@ -3,23 +3,18 @@ import NSF from "../../assets/nsf_logo.png"
 import TAMU from "../../assets/tamu_logo.png"
 import UF from "../../assets/uf_logo.png"
 import NavBar from "../../components/NavBar/NavBar"
+import Footer from '../../components/Footer/Footer';
 import "./Help.less"
 
-export default function Help(props) {
+export default function Help({textScale, textScaleUpdate}) {
 	const[submitted, setSubmitted] = useState(false);
 	const name = useRef("");
 	const email = useRef("");
 	const message = useRef("");
 	
-	const lang = useRef("en");
-	
-	document.documentElement.lang = lang;
-	
 	function submit(e) {
 		// prevent page refresh
 		e.preventDefault();
-		setSubmitted(true);
-		
 	}
 	
 	function setName(value) {
@@ -35,27 +30,20 @@ export default function Help(props) {
 	}
 	
 	if (submitted) {
-		return <p> Thank you! We'll be in touch soon.</p>;
-		setSubmitted(false);
-		// change this from return
+		return <p style={{ fontSize: `${15 * textScale}px` }}> Thank you! We'll be in touch soon.</p>;
 	}
   return (
-
     <div className="container nav-padding">
       <NavBar />
       <div id="about-content-container">
-        <h1 id="title">CONTACT US</h1>
-        <p>
-		Do you have any questions or concerns? <br/>
-		Please fill out the contact form below <br/>
-		We could love to hear from you! <br/>
+        <h1 id="title">HELP PAGE</h1>
+        <p style={{ fontSize: `${15 * textScale}px` }}>
+          Please submit any questions in the contact form below
         </p>
-		
 		<div id="divider" />
-		<div role = "contact form"/>
         <h1 id="secondary-title">Contact Us</h1>
 				  <form onSubmit = {submit}>
-		    <label htmlFor = 'name'> Name: </label><br/>
+		    <label htmlFor = 'name' style={{ fontSize: `${15 * textScale}px` }}> Name: </label><br/>
 			<input 
 				type = 'text' 
 				id = 'name' 
@@ -65,7 +53,7 @@ export default function Help(props) {
 				required
 				/> 
 				<br/>
-			<label htmlFor="email">Email:</label><br/>
+			<label htmlFor="email" style={{ fontSize: `${15 * textScale}px` }}>Email:</label><br/>
 			<input 
 				type="email" 
 				id="email" 
@@ -75,7 +63,7 @@ export default function Help(props) {
 				required
 				/>
 				<br/>
-			<label htmlFor="message">Message:</label><br/>
+			<label htmlFor="message" style={{ fontSize: `${15 * textScale}px` }}>Message:</label><br/>
 			<textarea 
 				type="text" 
 				id="message" 
@@ -84,9 +72,16 @@ export default function Help(props) {
 				onChange={(e) => setMessage(e.target.value)}
 				/>
 				<br/>
-				<button type="submit">Submit</button>
+				<button type="submit" style={{ fontSize: `${15 * textScale}px` }}>Submit</button>
           </form>
       </div>
+	  <Footer textScale = {textScale} textScaleUpdate = {textScaleUpdate}/>
     </div>
   )
 }		  
+
+
+// create an HTML form (look in HTML tutorial)
+// have a submit button
+// worry abt styling after
+// casmm connect?

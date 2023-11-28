@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import NavBar from "../../components/NavBar/NavBar";
+import Footer from '../../components/Footer/Footer';
 import "./FAQ.less";
 
-export default function FAQ(props) {
+export default function FAQ({textScale, textScaleUpdate}) {
   const [activeQuestion, setActiveQuestion] = useState(null);
 
   const questionsAndAnswers = [
@@ -21,18 +22,19 @@ export default function FAQ(props) {
     <div className="container nav-padding">
       <NavBar />
       <div id="faq-content-container">
-        <h1 id="title">Frequently Asked Questions</h1>
+        <h1 id="title" style={{ fontSize: `${45 * textScale}px` }}>Frequently Asked Questions</h1>
 
         {questionsAndAnswers.map((item, index) => (
           <div key={index}>
             <h2 className="question" onClick={() => setActiveQuestion(index)}>
               {item.question}
             </h2>
-            {activeQuestion === index && <p className="answer">{item.answer}</p>}
+            {activeQuestion === index && <p className="answer" style={{ fontSize: `${20 * textScale}px` }}>{item.answer}</p>}
             <div id="divider" />
           </div>
         ))}
       </div>
+      <Footer textScale = {textScale} textScaleUpdate = {textScaleUpdate}/>
     </div>
   );
 }

@@ -5,9 +5,10 @@ import UF from "../../assets/uf_logo.png"
 import BlocklyLogo from "../../assets/blocklylogo.png"
 import NavBar from "../../components/NavBar/NavBar"
 import "./About.less"
+import Footer from '../../components/Footer/Footer';
 import { useState } from "react";
 
-export default function About(props) {
+export default function About({textScale, textScaleUpdate}) {
   
   const [expanded, setExpanded] = useState(false);
 
@@ -25,11 +26,11 @@ export default function About(props) {
           <img src={NSF} alt="nsf" />
           <img src={TAMU} alt="tamu" />
         </div>
-        <p>
+        <p style={{ fontSize: `${15 * textScale}px` }}>
           CASMM is developed by the University of Florida and Texas A&M
           University with support from the National Science Foundation.
         </p>
-        <p>
+        <p style={{ fontSize: `${15 * textScale}px` }}>
           CASMM, or Computation and Science Modeling through Making, is a
           cloud-based programming interface designed for fifth and sixth grade
           students to support them in building computational physical models for
@@ -38,7 +39,7 @@ export default function About(props) {
         
         <div id="divider" />
         <h1 id="secondary-title">How it Works</h1>
-        <p>
+        <p style={{ fontSize: `${15 * textScale}px` }}>
           CASMM makes use of Google's{" "}
           <a
             href="https://developers.google.com/blockly"
@@ -62,7 +63,7 @@ export default function About(props) {
           </span>
           {expandedS ? (
             <div className="expandable">
-              <p>CASMM provides a fun learning environment to help you learn how to program an Arduino. 
+              <p style={{ fontSize: `${15 * textScale}px` }}>CASMM provides a fun learning environment to help you learn how to program an Arduino. 
                 You can create on your own through the sandbox and explore the creations in the gallery 
                 or join a classroom with a code provided by your teacher for guided assignments.</p>
             </div>
@@ -75,7 +76,7 @@ export default function About(props) {
           </span>
           {expanded ? (
             <div className="expandable">
-              <p>CASMM provides a safe and friendly learning environment for students of all ages that
+              <p style={{ fontSize: `${15 * textScale}px` }}>CASMM provides a safe and friendly learning environment for students of all ages that
                  allows them to learn to think more creatively through an easy-to-use block-based
                   programming language. To ensure CASMM remains a safe space, CASMM moderates any
                    shared content and provides educators with the tools to moderate within their classrooms.</p>
@@ -89,7 +90,7 @@ export default function About(props) {
           </span>
           {expandedE ? (
             <div className="expandable">
-              <p>CASMM allows teachers to make classrooms provide assignments for students. 
+              <p style={{ fontSize: `${15 * textScale}px` }}>CASMM allows teachers to make classrooms provide assignments for students. 
                 Teachers can also create or use shared lessons to help students learn how to program an Arduino. 
                 CASMM allows students to share their creations within their classrooms or schools and
                  provides discussion boards and live dashboards to allow students to learn collaboratively.</p>
@@ -100,7 +101,7 @@ export default function About(props) {
         <div id="divider" />
 
         <h1 id="secondary-title">Our Team</h1>
-        <p>
+        <p style={{ fontSize: `${15 * textScale}px` }}>
           The following team members from the University of Florida have
           contributed to the design, development, and evaluation of the CASMM
           application:
@@ -145,6 +146,7 @@ export default function About(props) {
         <img src={BlocklyLogo} alt="tamu" />
 
       </div>
+      <Footer textScale = {textScale} textScaleUpdate = {textScaleUpdate}/>
     </div>
   )
 }
