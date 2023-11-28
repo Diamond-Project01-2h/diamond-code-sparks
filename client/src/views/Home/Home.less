@@ -3,7 +3,9 @@
 @neutral-background: #f0f2f5;
 @light-grey: #d3d3d3;
 @text-color: #333;
-@font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap');
+@font-family: 'Comic Neue', cursive;
+@base-font-size: 20px;
 
 .flex-center() {
     display: flex;
@@ -16,6 +18,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: @font-family;
+    font-size: @base-font-size;
 }
 
 body,
@@ -159,4 +162,60 @@ footer {
     color: white;
     padding: 20px;
     text-align: center;
+}
+
+.features-grid {
+  display: flex;
+  justify-content: space-between; /* Adjust as needed, e.g., space-around or space-evenly */
+}
+
+.feature-item {
+  width: 30%; /* Adjust the width as needed */
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-right: 10px; /* Add margin between features */
+}
+
+.home-testimonials {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.testimonials-container {
+  width: 70%; /* Adjust the width as needed */
+  margin: 0 auto; /* Center the container horizontally */
+}
+
+.testimonial {
+  margin: 20px 0;
+  padding: 20px;
+  border: 1px solid #ccc; /* Add a border for separation */
+  border-radius: 10px;
+}
+
+.home-call-to-action {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.join-now-button {
+  font-family: 'Comic Neue', cursive;
+  font-size: 24px; /* Adjust the font size as needed */
+  padding: 15px 30px; /* Adjust the padding as needed */
+  margin-top: 20px; /* Add margin for spacing */
+  background-color: #00A0FF; /* Use the appropriate color */
+  color: #FFFFFF; /* Set the text color */
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Add a smooth transition effect */
+}
+
+.join-now-button:hover {
+  background-color: #FF8C00; /* Change color on hover for interactivity */
 }
