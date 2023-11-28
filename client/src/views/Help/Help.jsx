@@ -11,9 +11,15 @@ export default function Help(props) {
 	const email = useRef("");
 	const message = useRef("");
 	
+	const lang = useRef("en");
+	
+	document.documentElement.lang = lang;
+	
 	function submit(e) {
 		// prevent page refresh
 		e.preventDefault();
+		setSubmitted(true);
+		
 	}
 	
 	function setName(value) {
@@ -30,16 +36,23 @@ export default function Help(props) {
 	
 	if (submitted) {
 		return <p> Thank you! We'll be in touch soon.</p>;
+		setSubmitted(false);
+		// change this from return
 	}
   return (
+
     <div className="container nav-padding">
       <NavBar />
       <div id="about-content-container">
-        <h1 id="title">HELP PAGE</h1>
+        <h1 id="title">CONTACT US</h1>
         <p>
-          Please submit any questions in the contact form below
+		Do you have any questions or concerns? <br/>
+		Please fill out the contact form below <br/>
+		We could love to hear from you! <br/>
         </p>
+		
 		<div id="divider" />
+		<div role = "contact form"/>
         <h1 id="secondary-title">Contact Us</h1>
 				  <form onSubmit = {submit}>
 		    <label htmlFor = 'name'> Name: </label><br/>
@@ -77,9 +90,3 @@ export default function Help(props) {
     </div>
   )
 }		  
-
-
-// create an HTML form (look in HTML tutorial)
-// have a submit button
-// worry abt styling after
-// casmm connect?
