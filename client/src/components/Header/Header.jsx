@@ -2,12 +2,10 @@
 import React from 'react';
 import './Header.less';
 import placeholderLogo from '../../assets/chasm.png'; // Replace with your actual logo
+import { useNavigate } from 'react-router-dom';
 
 const Header = () => {
-  const navigate = (path) => {
-    // Navigation logic here
-    console.log(`Navigate to ${path}`); // Placeholder for navigation logic
-  };
+  const navigate = useNavigate();
 
   return (
     <header className="header">

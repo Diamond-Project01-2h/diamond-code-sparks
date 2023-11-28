@@ -22,16 +22,27 @@ import StudentLogin from './views/StudentLogin/StudentLogin';
 import ForgetPassword from './views/TeacherLogin/ForgetPassword';
 import ResetPassword from './views/TeacherLogin/ResetPassword';
 import TeacherLogin from './views/TeacherLogin/TeacherLogin';
+import {useState} from 'react';
 
 const App = () => {
+  
+  const [textScale, setTextScale] = useState(1);
+  function textScaleUpdate(value) {
+    console.log("update called: " + textScale);
+    setTextScale(value);
+    console.log("Update end: " + textScale);
+  }
+  
   return (
+    
+    
     <div>
       <Routes>
-        <Route path='/' element={<Home />} />
+        <Route path='/' element={<Home textScale = {textScale} textScaleUpdate = {textScaleUpdate}/>} />
         <Route path='/join' element={<Join />} />
-        <Route path='/faq' element={<FAQ />} />
-        <Route path='/about' element={<About />} />
-		<Route path='/help' element={<Help />} />
+        <Route path='/faq' element={<FAQ textScale = {textScale} textScaleUpdate = {textScaleUpdate}/>} />
+        <Route path='/about' element={<About textScale = {textScale} textScaleUpdate = {textScaleUpdate}/>} />
+		<Route path='/help' element={<Help textScale = {textScale} textScaleUpdate = {textScaleUpdate}/>} />
         <Route path='/teacherlogin' element={<TeacherLogin />} />
         <Route path='/forgot-password' element={<ForgetPassword />} />
         <Route path='/reset-password' element={<ResetPassword />} />
