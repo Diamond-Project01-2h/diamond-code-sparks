@@ -1,4 +1,4 @@
-# CaSMM
+# CodeSparks
 
 > Computation and Science Modeling through Making
 
