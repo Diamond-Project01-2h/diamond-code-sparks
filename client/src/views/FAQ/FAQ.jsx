@@ -31,6 +31,7 @@ export default function FAQ({ textScale, textScaleUpdate }) {
   return (
     <div className="container nav-padding">
       <NavBar />
+
       <div id="faq-content-container">
         <h1 id="title" style={{ fontSize: `${45 * textScale}px`, fontWeight: 'bold' }}>Frequently Asked Questions</h1>
 

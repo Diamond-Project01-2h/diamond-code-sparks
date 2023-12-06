@@ -12,7 +12,7 @@ function Home({textScale, textScaleUpdate}) {
   
     return (
   <div className="home-container">
-    <Header />
+    <Header textScale = {textScale} textScaleUpdate = {textScaleUpdate}/>
     <main className="home-main-content">
       {/* Introduction Section */}
 <section className="home-introduction" style={{ textAlign: 'center', marginBottom: '20px' }}>

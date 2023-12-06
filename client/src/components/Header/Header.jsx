@@ -4,14 +4,46 @@ import './Header.less';
 import placeholderLogo from '../../assets/chasm.png'; // Replace with your actual logo
 import { useNavigate } from 'react-router-dom';
 
-const Header = () => {
+const Header = ({textScale, textScaleUpdate}) => {
   const navigate = useNavigate();
+
+  function increase(e) {
+    e.preventDefault();
+    
+    const test = textScale;
+    console.log("Increase called: " + test);
+    textScaleUpdate(textScale + 0.25);
+    console.log("Increase end: " + (test + 0.25));
+  }
+  function decrease(e) {
+    if(textScale != 1) {
+      e.preventDefault();
+      const test = textScale;
+      
+      console.log("Decrease called: " + test);
+      textScaleUpdate(textScale - 0.25);
+      console.log("Decrease end: " + (test - 0.25));
+    }
+    else {
+      console.log(textScale);
+    }
+  }
 
   return (
     <header className="header">
       <img src={placeholderLogo} alt="Logo" className="header-logo" style={{ width: '90px', height: 'auto' }} onClick={() => navigate('/')} />
 
       <nav className="header-navigation">
+
+        {/* Dropdown for accesability features */}
+      <div className="dropdown">
+          <button className="dropbtn">Accessibility</button>
+          <div className="dropdown-content">
+          <a onClick={increase}>Increase Text Size</a>
+          <a onClick={decrease}>Decrease Text Size</a>
+          </div>
+        </div>
+
         {/* Dropdown for Parents */}
         <div className="dropdown">
           <button className="dropbtn">Parents</button>
