@@ -9,7 +9,8 @@ const Header = () => {
 
   return (
     <header className="header">
-      <img src={placeholderLogo} alt="Logo" className="header-logo" onClick={() => navigate('/')} />
+      <img src={placeholderLogo} alt="Logo" className="header-logo" style={{ width: '90px', height: 'auto' }} onClick={() => navigate('/')} />
+
       <nav className="header-navigation">
         {/* Dropdown for Parents */}
         <div className="dropdown">

@@ -1,7 +1,7 @@
 import React from 'react';
 import './NavBar.less';
 import config from './NavBarConfig.json';
-import Logo from '../../assets/casmm_logo.png';
+import Logo from '../../assets/chasm.png';
 import { Link, useNavigate } from 'react-router-dom';
 import { Menu, Dropdown } from 'antd';
 import { DownOutlined } from '@ant-design/icons';
@@ -118,7 +118,8 @@ export default function NavBar() {
             : '/'
         }
       >
-        <img src={Logo} id='casmm-logo' alt='logo' />
+        <img src={Logo} id='casmm-logo' alt='logo' style={{ width: '90px', height: 'auto' }} />
+
       </Link>
       <div id='dropdown-menu'>
         <Dropdown overlay={menu} trigger={['click']}>
