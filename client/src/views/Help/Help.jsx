@@ -72,7 +72,24 @@ export default function Help({textScale, textScaleUpdate}) {
 				onChange={(e) => setMessage(e.target.value)}
 				/>
 				<br/>
-				<button type="submit" style={{ fontSize: `${15 * textScale}px` }}>Submit</button>
+				<button
+  type="submit"
+  style={{
+    fontSize: `${15 * textScale}px`,
+    fontFamily: 'Comic Neue, cursive',
+    fontSize: '24px',
+    padding: '15px 30px',
+    marginTop: '20px',
+    backgroundColor: '#00A0FF',
+    color: '#FFFFFF',
+    border: 'none',
+    borderRadius: '10px',
+    cursor: 'pointer',
+    transition: 'background-color 0.3s ease',
+  }}
+>
+  Submit
+</button>
           </form>
       </div>
 	  <Footer textScale = {textScale} textScaleUpdate = {textScaleUpdate}/>
