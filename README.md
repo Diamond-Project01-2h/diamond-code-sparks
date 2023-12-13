@@ -222,7 +222,7 @@ Over the course of the project, our user stories evolved in several ways:
     - Design aligned with the website's branding and aesthetic theme.
     - Positioned in the website's header for consistent visual identity.
   - **Implementation** : Logo used in scalable format (SVG or high-quality image).
-  - **Screenshot** : [Insert screenshot showing the website header with the new logo].
+
 2. **Redesigned Header and Footer**
   - **Technical Details** :
     - Header with dropdown menu for improved navigation.
@@ -248,7 +248,7 @@ Over the course of the project, our user stories evolved in several ways:
     - Integrated to provide multilingual support, enhancing the application's accessibility for diverse users.
     - Connected via API calls, handling dynamic content translation.
   - **Implementation** : Embedded within various components of the application for real-time language switching.
-  - **Screenshot** : [Insert screenshot showing language translation options].
+
 4. **FAQ, Help/Contact, and About Pages**
   - **Technical Details** :
     - FAQ page developed to address common user inquiries, using an interactive and easy-to-navigate layout.
