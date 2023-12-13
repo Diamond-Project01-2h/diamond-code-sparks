@@ -23,6 +23,7 @@ import ForgetPassword from './views/TeacherLogin/ForgetPassword';
 import ResetPassword from './views/TeacherLogin/ResetPassword';
 import TeacherLogin from './views/TeacherLogin/TeacherLogin';
 import {useState} from 'react';
+import {LanguageProvider} from './Utils/LanguageContext';
 
 const App = () => {
   
@@ -34,7 +35,7 @@ const App = () => {
   }
   
   return (
-    
+    <LanguageProvider> 
     
     <div>
       <Routes>
@@ -133,6 +134,7 @@ const App = () => {
         <Route path='*' element={<NotFound/>} />
       </Routes>
     </div>
+    </LanguageProvider>
   );
 };
 
