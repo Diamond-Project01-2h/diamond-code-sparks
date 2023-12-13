@@ -23,7 +23,7 @@
 
 - **Product Manager** :
   - **Name** : Julien Samuel Guimez
-  - **Phone** : (352) 336-7272
+  - **Phone** : (754) 610-7484
   - **Email** : jguimez@ufl.edu
 - **Scrum Master** :
   - **Name** : Mehron Talebi
